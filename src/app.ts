@@ -1,9 +1,9 @@
 import Koa from "koa";
 
+import rootRouter from "./routers/rootRouter";
+
 const app = new Koa();
 
-app.use(async (ctx, next) => {
-    ctx.body = "Hello World";
-});
+app.use(rootRouter.routes());
 
 export default app;
